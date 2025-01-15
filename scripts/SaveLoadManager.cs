@@ -129,7 +129,7 @@ public class SaveLoadManager : MonoBehaviour
 
                 foreach (var memento in wrapper.saveitems)
                 {
-                    memento.revertserialization(); // Converts serialized list back to a dictionary 
+                    memento.revertserialization(); // Converts serialized list back to the dictionary for dogs 
 
 
                     GameObject doginstance = Instantiate(LogicManager.Instance.dogprefab);
@@ -137,7 +137,7 @@ public class SaveLoadManager : MonoBehaviour
                     if (memento.isactive == true)
                     {
                         LogicManager.Instance.dogsawake.Add(dogcomponent);
-                        LogicManager.Instance.Dog = doginstance; // Update the reference here
+                        LogicManager.Instance.Dog = doginstance; // Update's the reference here
                     }
                     else
                     {
